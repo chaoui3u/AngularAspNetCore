@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-
+import {WebService} from './web.service';
 @Component({
     selector: 'messages',
     template: `This is a messages Component 
@@ -16,5 +16,9 @@ import {Component} from '@angular/core';
 })
 
 export class MessagesComponent{
+    constructor(private webService: WebService){}
+    ngOnInit(){
+        this.webService.getMessages();
+    }
     messages= [{text:'some text',owner:'Tim'},{text:'other message', owner:'jane'}];
 }
