@@ -7,11 +7,14 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule,MatCardModule} from '@angular/material';
 import {WebService} from './web.service';
 import {HttpClientModule} from '@angular/common/http';
+import {NewMessageComponent} from './new-message.component';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MessagesComponent
+    MessagesComponent,
+    NewMessageComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +22,8 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserAnimationsModule,
     MatButtonModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule
   ],
   providers: [
     WebService
