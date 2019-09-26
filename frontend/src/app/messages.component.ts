@@ -2,7 +2,17 @@ import {Component} from '@angular/core';
 
 @Component({
     selector: 'messages',
-    template: 'This is a messages Component <div *ngFor="let message of messages">{{message.text}} by {{message.owner}}</div>'
+    template: `This is a messages Component 
+    <div *ngFor="let message of messages">
+    <mat-card style="margin:8px">
+
+            <mat-card-title>{{message.owner}}</mat-card-title>
+
+        <mat-card-content>
+             {{message.text}}
+        </mat-card-content>
+     </mat-card>
+     </div>`
 })
 
 export class MessagesComponent{
