@@ -27,9 +27,10 @@ namespace MessageBoardBackend.Controllers
             return messages;
         }
         [HttpPost]
-        public void Post([FromBody]Models.Message message)
+        public Models.Message Post([FromBody]Models.Message message)
         {
             messages.Add(message);
+            return message;
         }
     }
 }

@@ -3,7 +3,7 @@ import {WebService} from './web.service';
 @Component({
     selector: 'messages',
     template: `This is a messages Component 
-    <div *ngFor="let message of messages">
+    <div *ngFor="let message of webService.messages">
     <mat-card class="card">
 
         <mat-card-title>
@@ -21,10 +21,4 @@ import {WebService} from './web.service';
 export class MessagesComponent{
     constructor(private webService: WebService){}
    
-    async ngOnInit(){
-        var response = await this.webService.getMessages();
-        response = JSON.stringify(response);
-        this.messages = JSON.parse(response.toString()) ;
-    }
-    messages= [];
 }

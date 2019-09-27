@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import {MessagesComponent} from './messages.component';
 @Component({
   selector: 'app-root',
@@ -8,4 +8,5 @@ import {MessagesComponent} from './messages.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
 }

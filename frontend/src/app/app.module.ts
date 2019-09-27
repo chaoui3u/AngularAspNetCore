@@ -9,6 +9,7 @@ import {WebService} from './web.service';
 import {HttpClientModule} from '@angular/common/http';
 import {NewMessageComponent} from './new-message.component';
 import {MatInputModule} from '@angular/material/input';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {MatInputModule} from '@angular/material/input';
     MatButtonModule,
     MatCardModule,
     HttpClientModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule
   ],
   providers: [
     WebService
