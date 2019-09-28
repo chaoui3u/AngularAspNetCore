@@ -42,7 +42,10 @@ export class WebService{
         }
 
      }
-
+    
+     getUser(){
+         return this.http.get(this.BASE_URL+'/users/me').subscribe();
+     }
      private handleError(error){
         console.error(error);
         this.sb.open(error,"close",{duration:2000});

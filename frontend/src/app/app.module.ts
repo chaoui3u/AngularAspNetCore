@@ -18,7 +18,7 @@ import {HomeComponent} from './home.component';
 import {RegisterComponent} from './register.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {AuthService} from './auth.service';
-
+import {LoginComponent} from './login.component';
 
 var routes =[{
   path:'',
@@ -35,6 +35,10 @@ var routes =[{
 {
   path:'register',
   component: RegisterComponent
+},
+{
+  path:'login',
+  component: LoginComponent
 }
 ];
 
@@ -45,7 +49,8 @@ var routes =[{
     NewMessageComponent,
     NavComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

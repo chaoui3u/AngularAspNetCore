@@ -7,6 +7,7 @@ namespace MessageBoardBackend.Models
 {
     public class Message
     {
+        public string Id { get; set; }
         public string owner { get; set; }
         public string text { get; set; }
     }
