@@ -9,13 +9,43 @@ import {WebService} from './web.service';
 import {HttpClientModule} from '@angular/common/http';
 import {NewMessageComponent} from './new-message.component';
 import {MatInputModule} from '@angular/material/input';
-import {FormsModule} from '@angular/forms';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+import {MatSnackBarModule} from '@angular/material';
+import {NavComponent} from './nav.component';
+import {MatToolbarModule} from '@angular/material';
+import {RouterModule} from '@angular/router';
+import {HomeComponent} from './home.component';
+import {RegisterComponent} from './register.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {AuthService} from './auth.service';
+
+
+var routes =[{
+  path:'',
+  component: HomeComponent
+},
+{
+  path:'messages',
+  component: MessagesComponent
+},
+{
+  path:'messages/:name',
+  component: MessagesComponent
+},
+{
+  path:'register',
+  component: RegisterComponent
+}
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     MessagesComponent,
-    NewMessageComponent
+    NewMessageComponent,
+    NavComponent,
+    HomeComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -25,10 +55,17 @@ import {FormsModule} from '@angular/forms';
     MatCardModule,
     HttpClientModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule,
+    MatSnackBarModule,
+    MatToolbarModule,
+    RouterModule.forRoot(routes),
+    MatFormFieldModule,
+    ReactiveFormsModule
   ],
   providers: [
-    WebService
+    WebService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })
